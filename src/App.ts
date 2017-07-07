@@ -26,7 +26,7 @@ export class FluxApp implements FluxAppInterface {
     const v = { state: state, cb: cb }
     this.__storesInitialStates.set(id, v)
   }
-  constructor(dispatcher: Dispatcher<{}>) {
+  constructor(dispatcher: Dispatcher<Payload<{}>>) {
     this.dispatcher = dispatcher
   }
   dispatch<T>(action: symbol, data: T) {
