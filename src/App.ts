@@ -4,7 +4,7 @@ import { makeAction, ActionType } from './Action'
 import { BaseInterface, BaseStore } from './Store';
 
 
-type ActionsProxy<T> = {
+export type ActionsProxy<T> = {
   [K in keyof T]: ActionType<T[K]>
 }
 

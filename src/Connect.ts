@@ -1,7 +1,7 @@
 import { BaseInterface } from './Store'
 import { Container } from 'flux/utils'
 
-type FunctionifyState<P, S> = {
+export type FunctionifyState<P, S> = {
   [K in keyof S]?: (props?: P) => S[K]
 }
 
@@ -28,7 +28,7 @@ export function Connect<P=never, S=never>(...stores: [BaseInterface<{}>, Functio
         if (super.calculateState !== undefined) {
           return super.calculateState(prevState, props)
         }
-        const res: IndexedObject = {}
+        const res: {[key:string]: any} = {}
         for (const [k, v] of calcs) {
           res[k] = v(props)
         }

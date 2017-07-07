@@ -16,3 +16,5 @@ export type Payload<T> = {
   action: symbol
   data: T
 }
+
+export {Dispatcher}

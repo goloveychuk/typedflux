@@ -1,5 +1,6 @@
 import {BaseInterface, BaseStore} from './Store';
 import {ActionType} from './Action';
+import {FluxAppInterface} from './Common';
 
 // decorator, used to bind action
 export function Bind<T>(action: ActionType<(...args: any[]) => T>) {

@@ -3,8 +3,10 @@ import { EventEmitter, EventSubscription } from 'fbemitter';
 
 import { ActionType } from './Action';
 import { Payload, FluxAppInterface } from './Common'
+import { Dispatcher } from 'flux';
 
-type DispatchToken = string
+export type DispatchToken = string
+
 
 
 export abstract class BaseInterface<S, FA extends FluxAppInterface = FluxAppInterface>  {
